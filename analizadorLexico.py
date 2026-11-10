@@ -38,3 +38,26 @@ if token in ["SCAN"]:
     match("RPAREN")
 else:
     error()
+if token in ["VAR"]:
+    match("VAR")
+
+    if token in ["ID"]:
+        match("ID")
+    else:
+        error()
+
+    while token in ["SEMICOLON"]:
+        match("SEMICOLON")
+        if token in ["ID"]:
+            match("ID")
+        else:
+            error()
+
+    if token in ["INT"]:
+        match("INT")
+    elif token in ["FLOAT"]:
+        match("FLOAT")
+    else:
+        error()
+else:
+    error()
