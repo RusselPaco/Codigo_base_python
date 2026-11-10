@@ -43,3 +43,4 @@ def analizar_token(cadena):
 entradas = ["variable1+", "125", "45.67", "+", "_contador", "99num", "++"]
 for e in entradas:
 	print(f"'{e}' -> {analizar_token(e)}")
+	print("")
