@@ -20,3 +20,21 @@ if token in ["PRINT"]:
     match("RPAREN")
 else:
     error()
+if token in ["SCAN"]:
+    match("SCAN")
+    match("LPAREN")
+
+    if token in ["LETRA"]:
+        traducir_letra()
+    else:
+        error()
+
+    while token in ["LETRA", "DIGITO"]:
+        if token in ["LETRA"]:
+            traducir_letra()
+        else:
+            traducir_digito()
+
+    match("RPAREN")
+else:
+    error()
