@@ -1,3 +1,12 @@
+#TOKENS
+#OR 300
+#AND 301
+#NOT 302
+#TRUE 303
+#FALSE 304
+#(  80
+#) 85
+
 def ini (tokens):
     i=0
     i,error = expresion_logica(tokens,i)
@@ -51,5 +60,5 @@ def factor(tokens,i):
         return i,'ERROR SE ESPERABA NOT,TRUE,FALSE O "("'
     return i,''
 
-tokens= [302,80,303,300,304,85,301,303]
+tokens= [302,80,303,300,304,85,301]
 print(ini(tokens))
